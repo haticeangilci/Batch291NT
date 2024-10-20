@@ -1,4 +1,4 @@
-package d23oop_collections;
+package d23oop_collections_15102024;
 
 public abstract class AbstractChild extends Honda{
     //Bu abstract bir class'tir. Parent'i da abstract.

@@ -1,4 +1,9 @@
-package d20staticblock_instanceblock_oop_08102024;
+package d20staticblock_instanceblock_oop;
 
-public class Car {
+public class Car extends Vehicle {
+
+    public Car() {
+        System.out.println("Sedan");
+    }
+
 }

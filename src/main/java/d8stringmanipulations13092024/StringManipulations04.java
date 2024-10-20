@@ -1,68 +1,43 @@
 package d8stringmanipulations;
 
-import java.util.Scanner;
-
-public class StringManipulations03 {
+public class StringManipulations04 {
     public static void main(String[] args) {
 
-        /*Ornek 1: Asagidaki kurallara gore kullanicinin girdigi password'u kontrol ediniz.
+        //Ornek 1: Asagida fiyatlari verilen urunlerin toplam fiyatini bulunuz.
+        //String tv = "$456.99";   String laptop = "$875.99"; ==> 456.99 + 875.99 = 1332.98
 
-        i)En az 8 karakter olsun
-        ii)Space karakteri password'de olmasin
-        iii)En az bir tane buyuk harf olsun
-        iv)En az bir tane kucuk harf olsun
-        v)En az bir tane rakam olsun */
+        //Example 1: Find the total price of the following products.
+        //String tv = "$456.99"; String laptop = "$875.99"; ==> 456.99 + 875.99 = 1332.98
 
-        /*Example 1: Check the password entered by the user according to the following rules.
+        //valueOf() : Belirtilen String'i Double'a cevirir
 
-        i) At least 8 characters
-        ii)Space character should not be in password
-        iii) At least one capital letter
-        iv) At least one lowercase letter
-        v)At least one number */
+        String tv = "$456.99";
+        String laptop = "$875.99";
 
-        //--------------------------
-        Scanner input = new Scanner(System.in);
-        System.out.println("Lutfen sifrenizi giriniz");
+        tv = tv.replace("$", "");
+        laptop = laptop.replace("$", "");
 
-        String pwd = input.nextLine();
+        Double totalPrice = Double.valueOf(tv) + Double.valueOf(laptop);
+        System.out.println(totalPrice); //1332.98
 
-        //i)En az 8 karakter olsun
+        //---------------------
+        //Ornek 2: Kullanici isminin ilk harflerini alip buyuk hale getirerek console'a yazdiriniz.
+        //           "   ali cAN   " ==> AC
+        //Example 2: Take the first letters of the username, capitalize them and write them to the console.
 
-        boolean lengthControl = pwd.length() > 7;
-        //System.out.println("lengthControl = " + lengthControl);
+        //trim() metodu bir String'deki bastaki ve sondaki bosluklari siler. Aradakileri silmez
+        //split() String'i istediginiz karakterden parcalamaya yarar.
+        //Not: Bir satirda, birden fazla methodu yanyana kullanirsaniz buna "method chain (zincir)" denir
 
-        //ii)Space karakteri password'de olmasin
-        //boolean spaceControl = pwd.replaceAll("[^ ]", "").length() == 0;
-        //boolean spaceControl = pwd.replaceAll("[^ ]", "").isEmpty();
-        boolean spaceControl = !pwd.contains(" ");
-        //System.out.println("spaceControl = " + spaceControl);
+        String name = "   ali cAN   ";
 
-        //iii)En az bir tane buyuk harf olsun
-        boolean upperCaseControl = pwd.replaceAll("[^A-Z]", "").length() > 0;
-        //System.out.println("upperCaseControl = " + upperCaseControl);
+        char first = name.trim().toUpperCase().charAt(0);
+        System.out.print(first); //A
 
-        // iv)En az bir tane kucuk harf olsun
-        boolean lowerCaseControl = pwd.replaceAll("[^a-z]", "").length() > 0;
-        //System.out.println("lowerCaseControl = " + lowerCaseControl);
+        char last = name.trim().toUpperCase().split(" ")[1].charAt(0);
+        System.out.print(last); //C
 
-        //v)En az bir tane rakam olsun
-        boolean digitControl = pwd.replaceAll("[^0-9]", "").length() > 0;
-        //System.out.println("digitControl = " + digitControl);
-
-        if (!digitControl){
-            System.out.println("Sifre an az bir rakam icermelidir");
-        }
-
-        //ODEV: En az 1 sembol icermeli
-
-        boolean isValid = lengthControl && spaceControl && upperCaseControl && lowerCaseControl && digitControl;
-
-        if (isValid) {
-            System.out.println("Sifre gecerlidir");
-        } else {
-            System.out.println("Sifre gecersizdir");
-        }
+        System.out.println("" + first + last); //AC
 
     }
 }

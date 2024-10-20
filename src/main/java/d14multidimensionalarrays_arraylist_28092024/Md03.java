@@ -1,4 +1,4 @@
-package d14multidimensionalarrays_arraylist_27092024;
+package d14multidimensionalarrays_arraylist_28092024;
 
 public class Md03 {
     public static void main(String[] args) {

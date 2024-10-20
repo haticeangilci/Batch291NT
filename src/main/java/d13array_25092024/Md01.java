@@ -1,4 +1,4 @@
-package d13array_26092024;
+package d13array_25092024;
 
 public class Md01 {
     public static void main(String[] args) {

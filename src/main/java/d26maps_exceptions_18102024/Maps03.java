@@ -1,4 +1,4 @@
-package d26maps_exceptions;
+package d26maps_exceptions_18102024;
 
 import java.util.Arrays;
 import java.util.HashMap;

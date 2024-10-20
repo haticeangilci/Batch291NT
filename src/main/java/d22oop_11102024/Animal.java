@@ -1,4 +1,4 @@
-package d22oop_11042024;
+package d22oop_11102024;
 
 public class Animal { //final bir class'in child'i olmaz
 
