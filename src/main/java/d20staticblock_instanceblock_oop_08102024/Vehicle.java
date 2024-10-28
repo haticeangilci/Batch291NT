@@ -1,4 +1,4 @@
-package d20staticblock_instanceblock_oop_08102024;
+package d20staticblock_instanceblock_oop;
 
 public class Vehicle {
 
@@ -10,4 +10,22 @@ public class Vehicle {
         System.out.println("Honda, 2023, Benzin");
     }
 
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

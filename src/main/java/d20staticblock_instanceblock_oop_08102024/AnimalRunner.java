@@ -1,5 +1,8 @@
 package d20staticblock_instanceblock_oop;
 
+import d21oop_09102024.Bird;
+import d21oop_09102024.Dog;
+
 public class AnimalRunner {
     public static void main(String[] args) {
 

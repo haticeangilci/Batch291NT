@@ -1,5 +1,8 @@
 package d22oop_11102024;
 
+import d21oop_09102024.Animal;
+import d21oop_09102024.Mammal;
+
 public class Dog extends Mammal {
 
     //Herkes Cat class'ta feedWithMilk() methodunu override etsin?
@@ -34,6 +37,9 @@ public class Dog extends Mammal {
     }
 
 
+    public void feedWithMilk() {
+    }
 
-
+    public void drink() {
+    }
 }
