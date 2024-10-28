@@ -24,6 +24,8 @@ public class Lambda04 {
         //printElementsUniqueToUpperCaseSorted(myList);
         //printElUniqueLowerCaseSortWithLength(myList);//ali elif yusuf zeynep mustafa
 
+
+
     } //main disi
 
     //----------------------
@@ -135,7 +137,7 @@ public class Lambda04 {
                 distinct().
                 map(String::toLowerCase).
                 sorted(Comparator.comparing(t -> t.length())).
-                forEach(t -> System.out.print(t + " "));//ali elif yusuf zeynep mustafa
+                forEach(Utils::printInTheSameLineWithSpace);//ali elif yusuf zeynep mustafa
 
     }
 
